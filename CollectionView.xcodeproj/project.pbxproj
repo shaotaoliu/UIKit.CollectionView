@@ -23,6 +23,7 @@
 		4A4140CC283886A50060D56F /* EditableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140CB283886A50060D56F /* EditableViewController.swift */; };
 		4A4140CE283891330060D56F /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140CD283891330060D56F /* NetworkViewController.swift */; };
 		4A4140D0283AA9580060D56F /* SortNodeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140CF283AA9580060D56F /* SortNodeArray.swift */; };
+		4A4140D8283AD4950060D56F /* CollectionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140D7283AD4950060D56F /* CollectionExample.swift */; };
 		4A70AE69283551F8003349CA /* MultiLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A70AE68283551F8003349CA /* MultiLayersViewController.swift */; };
 		4A70AE6B283580DF003349CA /* AdaptiveSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A70AE6A283580DF003349CA /* AdaptiveSectionViewController.swift */; };
 		4A70AE6E28359876003349CA /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A70AE6D28359876003349CA /* TextCell.swift */; };
@@ -34,7 +35,7 @@
 		4AA6DE77282FA03D0054B6B5 /* CompositionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6DE76282FA03D0054B6B5 /* CompositionCollectionViewController.swift */; };
 		4AA6DE79282FA5350054B6B5 /* Composition2CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6DE78282FA5350054B6B5 /* Composition2CollectionViewController.swift */; };
 		4AA6DE7B2830979D0054B6B5 /* Composition3CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6DE7A2830979D0054B6B5 /* Composition3CollectionViewController.swift */; };
-		4AA6DE7D2830AFC30054B6B5 /* DIffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6DE7C2830AFC30054B6B5 /* DIffableCollectionViewController.swift */; };
+		4AA6DE7D2830AFC30054B6B5 /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6DE7C2830AFC30054B6B5 /* DiffableCollectionViewController.swift */; };
 		4AD2AE75282F8AB000C43D35 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2AE73282F8AB000C43D35 /* CollectionViewCell.swift */; };
 		4AD2AE76282F8AB000C43D35 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD2AE74282F8AB000C43D35 /* CollectionViewCell.xib */; };
 		4AD2AE79282F956500C43D35 /* MoveCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2AE78282F956500C43D35 /* MoveCollectionViewController.swift */; };
@@ -62,6 +63,7 @@
 		4A4140CB283886A50060D56F /* EditableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableViewController.swift; sourceTree = "<group>"; };
 		4A4140CD283891330060D56F /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		4A4140CF283AA9580060D56F /* SortNodeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortNodeArray.swift; sourceTree = "<group>"; };
+		4A4140D7283AD4950060D56F /* CollectionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExample.swift; sourceTree = "<group>"; };
 		4A70AE68283551F8003349CA /* MultiLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLayersViewController.swift; sourceTree = "<group>"; };
 		4A70AE6A283580DF003349CA /* AdaptiveSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSectionViewController.swift; sourceTree = "<group>"; };
 		4A70AE6D28359876003349CA /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		4AA6DE76282FA03D0054B6B5 /* CompositionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionCollectionViewController.swift; sourceTree = "<group>"; };
 		4AA6DE78282FA5350054B6B5 /* Composition2CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Composition2CollectionViewController.swift; sourceTree = "<group>"; };
 		4AA6DE7A2830979D0054B6B5 /* Composition3CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composition3CollectionViewController.swift; sourceTree = "<group>"; };
-		4AA6DE7C2830AFC30054B6B5 /* DIffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIffableCollectionViewController.swift; sourceTree = "<group>"; };
+		4AA6DE7C2830AFC30054B6B5 /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
 		4AD2AE73282F8AB000C43D35 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4AD2AE74282F8AB000C43D35 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		4AD2AE78282F956500C43D35 /* MoveCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCollectionViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				4A251E65282F7261004E36E0 /* AppDelegate.swift */,
 				4A251E67282F7261004E36E0 /* SceneDelegate.swift */,
 				4A4140C5283818880060D56F /* ViewController.swift */,
+				4A4140D6283AD3F30060D56F /* Helpers */,
 				4AD2AE72282F8A9900C43D35 /* Cells */,
 				4AD2AE77282F943300C43D35 /* Controllers */,
 				4A251E6B282F7261004E36E0 /* Main.storyboard */,
@@ -123,6 +126,80 @@
 				4A251E73282F7263004E36E0 /* Info.plist */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		4A4140D1283ABB970060D56F /* Traditional */ = {
+			isa = PBXGroup;
+			children = (
+				4A251E69282F7261004E36E0 /* BasicCollectionViewController.swift */,
+				4AD2AE78282F956500C43D35 /* MoveCollectionViewController.swift */,
+				4AA6DE74282F9C9E0054B6B5 /* VerticalCollectionViewController.swift */,
+			);
+			path = Traditional;
+			sourceTree = "<group>";
+		};
+		4A4140D2283AC09C0060D56F /* Compositional Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4AA6DE76282FA03D0054B6B5 /* CompositionCollectionViewController.swift */,
+				4AA6DE78282FA5350054B6B5 /* Composition2CollectionViewController.swift */,
+				4AA6DE7A2830979D0054B6B5 /* Composition3CollectionViewController.swift */,
+			);
+			path = "Compositional Layout";
+			sourceTree = "<group>";
+		};
+		4A4140D3283AC0BE0060D56F /* Diffable Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				4A4140D5283AC0E50060D56F /* Collection View */,
+				4A4140D9283AD8BF0060D56F /* Layout List */,
+				4A4140D4283AC0C90060D56F /* Table View */,
+			);
+			path = "Diffable Data Source";
+			sourceTree = "<group>";
+		};
+		4A4140D4283AC0C90060D56F /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				4A4140CB283886A50060D56F /* EditableViewController.swift */,
+				4A4140CD283891330060D56F /* NetworkViewController.swift */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		4A4140D5283AC0E50060D56F /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				4AA6DE7C2830AFC30054B6B5 /* DiffableCollectionViewController.swift */,
+				4A70AE6A283580DF003349CA /* AdaptiveSectionViewController.swift */,
+				4A70AE7528361F0D003349CA /* SectionHeaderViewController.swift */,
+				4A4140BF283748BC0060D56F /* SectionBackgroundViewController.swift */,
+				4A4140C32837F9490060D56F /* GroupScrollingViewController.swift */,
+				4A4140C72838868B0060D56F /* SearchableViewController.swift */,
+				4A4140C92838869A0060D56F /* SortableViewController.swift */,
+			);
+			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		4A4140D6283AD3F30060D56F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4A4140CF283AA9580060D56F /* SortNodeArray.swift */,
+				4A4140D7283AD4950060D56F /* CollectionExample.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4A4140D9283AD8BF0060D56F /* Layout List */ = {
+			isa = PBXGroup;
+			children = (
+				4AE7D9462834249300D79E73 /* DiffableListViewController.swift */,
+				4AE7D94328331A3C00D79E73 /* ExpandableListViewController.swift */,
+				4AE7D94B2834BC7C00D79E73 /* LayoutHeaderViewController.swift */,
+				4A70AE68283551F8003349CA /* MultiLayersViewController.swift */,
+				4A4140C12837F9400060D56F /* ReorderingListViewController.swift */,
+			);
+			path = "Layout List";
 			sourceTree = "<group>";
 		};
 		4AD2AE72282F8A9900C43D35 /* Cells */ = {
@@ -135,7 +212,6 @@
 				4A70AE712835B2C6003349CA /* HeaderCell.swift */,
 				4A70AE732835C4DE003349CA /* BadgeView.swift */,
 				4A4140BD283745850060D56F /* SectionBackgroundView.swift */,
-				4A4140CF283AA9580060D56F /* SortNodeArray.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -143,26 +219,9 @@
 		4AD2AE77282F943300C43D35 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4A251E69282F7261004E36E0 /* BasicCollectionViewController.swift */,
-				4AD2AE78282F956500C43D35 /* MoveCollectionViewController.swift */,
-				4AA6DE74282F9C9E0054B6B5 /* VerticalCollectionViewController.swift */,
-				4AA6DE76282FA03D0054B6B5 /* CompositionCollectionViewController.swift */,
-				4AA6DE78282FA5350054B6B5 /* Composition2CollectionViewController.swift */,
-				4AA6DE7A2830979D0054B6B5 /* Composition3CollectionViewController.swift */,
-				4AA6DE7C2830AFC30054B6B5 /* DIffableCollectionViewController.swift */,
-				4AE7D9462834249300D79E73 /* DiffableListViewController.swift */,
-				4AE7D94B2834BC7C00D79E73 /* LayoutHeaderViewController.swift */,
-				4AE7D94328331A3C00D79E73 /* ExpandableListViewController.swift */,
-				4A70AE68283551F8003349CA /* MultiLayersViewController.swift */,
-				4A70AE6A283580DF003349CA /* AdaptiveSectionViewController.swift */,
-				4A70AE7528361F0D003349CA /* SectionHeaderViewController.swift */,
-				4A4140BF283748BC0060D56F /* SectionBackgroundViewController.swift */,
-				4A4140C12837F9400060D56F /* ReorderingListViewController.swift */,
-				4A4140C32837F9490060D56F /* GroupScrollingViewController.swift */,
-				4A4140C72838868B0060D56F /* SearchableViewController.swift */,
-				4A4140C92838869A0060D56F /* SortableViewController.swift */,
-				4A4140CB283886A50060D56F /* EditableViewController.swift */,
-				4A4140CD283891330060D56F /* NetworkViewController.swift */,
+				4A4140D1283ABB970060D56F /* Traditional */,
+				4A4140D2283AC09C0060D56F /* Compositional Layout */,
+				4A4140D3283AC0BE0060D56F /* Diffable Data Source */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -252,13 +311,14 @@
 				4AE7D94428331A3C00D79E73 /* ExpandableListViewController.swift in Sources */,
 				4AA6DE7B2830979D0054B6B5 /* Composition3CollectionViewController.swift in Sources */,
 				4AD2AE79282F956500C43D35 /* MoveCollectionViewController.swift in Sources */,
-				4AA6DE7D2830AFC30054B6B5 /* DIffableCollectionViewController.swift in Sources */,
+				4AA6DE7D2830AFC30054B6B5 /* DiffableCollectionViewController.swift in Sources */,
 				4AD2AE75282F8AB000C43D35 /* CollectionViewCell.swift in Sources */,
 				4AA6DE77282FA03D0054B6B5 /* CompositionCollectionViewController.swift in Sources */,
 				4A70AE7628361F0D003349CA /* SectionHeaderViewController.swift in Sources */,
 				4A4140C42837F9490060D56F /* GroupScrollingViewController.swift in Sources */,
 				4A4140CA2838869A0060D56F /* SortableViewController.swift in Sources */,
 				4A70AE69283551F8003349CA /* MultiLayersViewController.swift in Sources */,
+				4A4140D8283AD4950060D56F /* CollectionExample.swift in Sources */,
 				4A70AE7028359BF9003349CA /* ListCell.swift in Sources */,
 				4AA6DE79282FA5350054B6B5 /* Composition2CollectionViewController.swift in Sources */,
 				4A4140CE283891330060D56F /* NetworkViewController.swift in Sources */,

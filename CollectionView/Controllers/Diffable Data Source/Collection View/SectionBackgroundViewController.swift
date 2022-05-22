@@ -2,7 +2,7 @@ import UIKit
 
 class SectionBackgroundViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, String>!
     
     let names = ["Kevin", "Smith", "Jason", "James", "Bruce", "Lucas"]
@@ -38,7 +38,8 @@ class SectionBackgroundViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         layout.register(SectionBackgroundView.self, forDecorationViewOfKind: "backgroundElementKind")
         
-        collectionView.collectionViewLayout = layout
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        view.addSubview(collectionView)
     }
     
     private func setupDataSource() {
@@ -65,4 +66,3 @@ class SectionBackgroundViewController: UIViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
-

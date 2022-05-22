@@ -4,7 +4,7 @@ class AdaptiveSectionViewController: UIViewController {
 
     static let BadgeElementKind = "BadgeElementKind"
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<MultiSection, Int>!
     
     override func viewDidLoad() {
@@ -56,7 +56,8 @@ class AdaptiveSectionViewController: UIViewController {
             return layoutSection
         }
         
-        collectionView.collectionViewLayout = layout
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        view.addSubview(collectionView)
     }
     
     private func setupDataSource() {

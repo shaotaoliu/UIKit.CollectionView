@@ -8,7 +8,8 @@ class EditableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .systemBackground
+        
         setupSubViews()
         setupDataSource()
         setupSnapshot()

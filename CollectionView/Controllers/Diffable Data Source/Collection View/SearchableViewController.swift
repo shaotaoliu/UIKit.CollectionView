@@ -2,21 +2,46 @@ import UIKit
 
 class SearchableViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionView: UICollectionView!
+    var searchBar: UISearchBar!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, String>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupLayoutConfig()
+        let layout = setupLayoutConfig()
+        view.backgroundColor = .systemBackground
+        
+        setupSubViews(layout: layout)
         setupDataSource()
         setupSnapshot()
+    }
+    
+    private func setupSubViews(layout: UICollectionViewLayout) {
+        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        searchBar = UISearchBar()
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(collectionView)
+        view.addSubview(searchBar)
+        
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         
         searchBar.delegate = self
     }
     
-    private func setupLayoutConfig() {
+    private func setupLayoutConfig() -> UICollectionViewCompositionalLayout {
         
         let layout = UICollectionViewCompositionalLayout { sectionIndex, environment in
             let columns = environment.container.effectiveContentSize.width > 800 ? 3 : 2
@@ -39,7 +64,7 @@ class SearchableViewController: UIViewController {
             return section
         }
         
-        collectionView.collectionViewLayout = layout
+        return layout
     }
     
     private func setupDataSource() {

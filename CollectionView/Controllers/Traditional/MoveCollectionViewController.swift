@@ -6,12 +6,19 @@ class MoveCollectionViewController: UICollectionViewController {
     let spacing: CGFloat = 2.0
     let countPerRow = 3
     
+    init() {
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("not implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView!.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
-        collectionView!.collectionViewLayout = UICollectionViewFlowLayout()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

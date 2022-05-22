@@ -2,7 +2,7 @@ import UIKit
 
 class LayoutHeaderViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<ExpandableItem, ExpandableItem>!
     
     let items = [
@@ -34,7 +34,10 @@ class LayoutHeaderViewController: UIViewController {
         var config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         config.headerMode = .supplementary
         config.footerMode = .supplementary
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: config)
+        
+        let layout = UICollectionViewCompositionalLayout.list(using: config)
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        view.addSubview(collectionView)
     }
     
     private func setupDataSource() {

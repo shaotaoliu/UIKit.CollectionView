@@ -2,17 +2,21 @@ import UIKit
 
 class SectionHeaderViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var images = (1...20).map { "image\($0)"}
     var dataSource: UICollectionViewDiffableDataSource<Section, String>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let layout = createLayout()
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView!.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
         
-        collectionView.collectionViewLayout = createLayout()
+        view.addSubview(collectionView)
+        
         setupDataSource()
     }
     

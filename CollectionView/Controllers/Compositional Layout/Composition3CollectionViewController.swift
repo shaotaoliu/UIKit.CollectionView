@@ -2,18 +2,31 @@ import UIKit
 
 class Composition3CollectionViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var images = (1...20).map { "image\($0)"}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupCollectionView()
+        view.backgroundColor = .systemBackground
+    }
+    
+    private func setupCollectionView() {
+        let layout = createLayout()
+        
+        collectionView = UICollectionView(
+            frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 260),
+            collectionViewLayout: layout)
+        
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         collectionView!.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.collectionViewLayout = createLayout()
+        collectionView.center = view.center
+        
+        view.addSubview(collectionView)
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {

@@ -4,6 +4,14 @@ class CompositionCollectionViewController: UICollectionViewController {
 
     var images = (1...18).map { "image\($0)"}
     
+    init() {
+        super.init(collectionViewLayout: UICollectionViewLayout())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("not implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

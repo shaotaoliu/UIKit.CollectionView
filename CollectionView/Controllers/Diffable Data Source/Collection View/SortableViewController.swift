@@ -51,7 +51,7 @@ class SortableViewController: UIViewController {
         isSorting.toggle()
         
         if isSorting {
-            sort(mode: 2)
+            sort()
         }
         
         rightBarButtonItem.title = isSorting ? "Stop" : "Sort"

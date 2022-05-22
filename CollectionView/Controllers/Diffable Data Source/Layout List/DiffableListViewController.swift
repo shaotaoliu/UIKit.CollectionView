@@ -2,7 +2,7 @@ import UIKit
 
 class DiffableListViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, ExpandableItem>!
     
     let items = [
@@ -26,7 +26,10 @@ class DiffableListViewController: UIViewController {
     
     private func setupLayoutConfig() {
         let layoutConfig = UICollectionLayoutListConfiguration(appearance: .plain)
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
+        let layout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        view.addSubview(collectionView)
     }
     
     private func setupDataSource() {

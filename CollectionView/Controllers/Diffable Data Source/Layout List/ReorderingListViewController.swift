@@ -2,7 +2,7 @@ import UIKit
 
 class ReorderingListViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<ReorderingSection, ReorderingItem>!
     
     override func viewDidLoad() {
@@ -39,7 +39,10 @@ class ReorderingListViewController: UIViewController {
     
     private func setupLayoutConfig() {
         let layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
+        let layout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        view.addSubview(collectionView)
     }
     
     private func setupDataSource() {

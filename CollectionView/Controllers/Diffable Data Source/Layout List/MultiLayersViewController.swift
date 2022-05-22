@@ -2,7 +2,7 @@ import UIKit
 
 class MultiLayersViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<ExpandableItem, ExpandableItem>!
     
     let items = [
@@ -38,7 +38,10 @@ class MultiLayersViewController: UIViewController {
     
     private func setupLayoutConfig() {
         let config = UICollectionLayoutListConfiguration(appearance: .plain)
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: config)
+        let layout = UICollectionViewCompositionalLayout.list(using: config)
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        view.addSubview(collectionView)
     }
     
     private func setupDataSource() {

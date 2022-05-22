@@ -2,7 +2,7 @@ import UIKit
 
 class ExpandableListViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<ExpandableItem, ExpandableItem>!
     
     let items = [
@@ -23,6 +23,9 @@ class ExpandableListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewLayout())
+        view.addSubview(collectionView)
+        
         setupLayoutConfig()
         setupDataSource()
         setupSnapshot()
@@ -91,7 +94,8 @@ class ExpandableListViewController: UIViewController {
             return self.getTrailingSwipeConfiguration(item: item)
         }
         
-        collectionView.collectionViewLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
+        let layout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
+        collectionView.collectionViewLayout = layout
     }
     
     private func getLeadingSwipeConfiguration(item: ExpandableItem) -> UISwipeActionsConfiguration? {

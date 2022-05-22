@@ -2,7 +2,7 @@ import UIKit
 
 class BasicCollectionViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     let images = (1...20).map { "image\($0)" }
     let spacing: CGFloat = 2.0
     let countPerRow = 3
@@ -10,16 +10,22 @@ class BasicCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
-        
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = spacing
         layout.minimumLineSpacing = spacing
         
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.collectionViewLayout = layout
+        
+        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
+        
+        view.addSubview(collectionView)
     }
 }
 

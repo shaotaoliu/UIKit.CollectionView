@@ -2,14 +2,19 @@ import UIKit
 
 class NetworkViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    var tableView: UITableView!
     var dataSource: UITableViewDiffableDataSource<Section, String>!
     var wifiEnabled = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView = UITableView(frame: view.bounds, style: .insetGrouped)
         tableView.backgroundColor = .secondarySystemBackground
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        view.addSubview(tableView)
+        
         configureDataSource()
         updateUI()
     }
