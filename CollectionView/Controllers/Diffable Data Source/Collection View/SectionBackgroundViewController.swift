@@ -33,7 +33,7 @@ class SectionBackgroundViewController: UIViewController {
         // Section background:
         let background = NSCollectionLayoutDecorationItem.background(elementKind: "backgroundElementKind")
         background.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
-        section.decorationItems = [background]
+        section.decorationItems = [ background ]
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         layout.register(SectionBackgroundView.self, forDecorationViewOfKind: "backgroundElementKind")

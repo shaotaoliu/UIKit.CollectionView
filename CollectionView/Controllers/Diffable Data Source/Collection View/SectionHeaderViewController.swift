@@ -3,18 +3,13 @@ import UIKit
 class SectionHeaderViewController: UIViewController {
 
     var collectionView: UICollectionView!
-    var images = (1...20).map { "image\($0)"}
-    var dataSource: UICollectionViewDiffableDataSource<Section, String>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let layout = createLayout()
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
-        
-        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
-        collectionView!.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
-        
         view.addSubview(collectionView)
         
         setupDataSource()
@@ -56,10 +51,13 @@ class SectionHeaderViewController: UIViewController {
     
     func setupDataSource() {
         
-        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, imageName in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-            cell.setImage(imageName: imageName)
-            return cell
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewCell, Int> { cell, indexPath, number in
+            let hue = CGFloat(number) / CGFloat(20)
+            cell.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        }
+        
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, number in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: number)
         })
         
         let header = UICollectionView.SupplementaryRegistration<UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionHeader) { supplementaryView, elementKind, indexPath in
@@ -82,10 +80,10 @@ class SectionHeaderViewController: UIViewController {
                 for: indexPath)
         }
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
         snapshot.appendSections([.first, .second])
-        snapshot.appendItems(Array(images[0...8]), toSection: .first)
-        snapshot.appendItems(Array(images[9...19]), toSection: .second)
+        snapshot.appendItems(Array(0...8), toSection: .first)
+        snapshot.appendItems(Array(9...19), toSection: .second)
         dataSource.apply(snapshot, animatingDifferences: true)
     }
 }

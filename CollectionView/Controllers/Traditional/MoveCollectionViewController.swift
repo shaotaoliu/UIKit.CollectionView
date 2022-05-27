@@ -17,8 +17,7 @@ class MoveCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
-        collectionView!.register(nib, forCellWithReuseIdentifier: "CollectionViewCell")
+        collectionView!.register(CollectionImageCell.self, forCellWithReuseIdentifier: "CollectionImageCell")
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -26,7 +25,7 @@ class MoveCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionImageCell", for: indexPath) as! CollectionImageCell
         cell.setImage(imageName: images[indexPath.row])
         return cell
     }

@@ -7,7 +7,7 @@ struct SortNode: Hashable {
     init(value: Int, maxValue: Int) {
         self.value = value
         let hue = CGFloat(value) / CGFloat(maxValue)
-        self.color = UIColor(hue: hue,saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        self.color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
     }
     
     private let id = UUID()

@@ -24,6 +24,7 @@
 		4A4140CE283891330060D56F /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140CD283891330060D56F /* NetworkViewController.swift */; };
 		4A4140D0283AA9580060D56F /* SortNodeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140CF283AA9580060D56F /* SortNodeArray.swift */; };
 		4A4140D8283AD4950060D56F /* CollectionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140D7283AD4950060D56F /* CollectionExample.swift */; };
+		4A4140E1283B2FFC0060D56F /* CollectionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4140E0283B2FFC0060D56F /* CollectionImageCell.swift */; };
 		4A70AE69283551F8003349CA /* MultiLayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A70AE68283551F8003349CA /* MultiLayersViewController.swift */; };
 		4A70AE6B283580DF003349CA /* AdaptiveSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A70AE6A283580DF003349CA /* AdaptiveSectionViewController.swift */; };
 		4A70AE6E28359876003349CA /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A70AE6D28359876003349CA /* TextCell.swift */; };
@@ -64,6 +65,7 @@
 		4A4140CD283891330060D56F /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		4A4140CF283AA9580060D56F /* SortNodeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortNodeArray.swift; sourceTree = "<group>"; };
 		4A4140D7283AD4950060D56F /* CollectionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExample.swift; sourceTree = "<group>"; };
+		4A4140E0283B2FFC0060D56F /* CollectionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImageCell.swift; sourceTree = "<group>"; };
 		4A70AE68283551F8003349CA /* MultiLayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLayersViewController.swift; sourceTree = "<group>"; };
 		4A70AE6A283580DF003349CA /* AdaptiveSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSectionViewController.swift; sourceTree = "<group>"; };
 		4A70AE6D28359876003349CA /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		4AD2AE72282F8A9900C43D35 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4A4140E0283B2FFC0060D56F /* CollectionImageCell.swift */,
 				4AD2AE73282F8AB000C43D35 /* CollectionViewCell.swift */,
 				4AD2AE74282F8AB000C43D35 /* CollectionViewCell.xib */,
 				4A70AE6D28359876003349CA /* TextCell.swift */,
@@ -301,6 +304,7 @@
 				4A4140C6283818880060D56F /* ViewController.swift in Sources */,
 				4AA6DE75282F9C9E0054B6B5 /* VerticalCollectionViewController.swift in Sources */,
 				4A251E6A282F7261004E36E0 /* BasicCollectionViewController.swift in Sources */,
+				4A4140E1283B2FFC0060D56F /* CollectionImageCell.swift in Sources */,
 				4A4140D0283AA9580060D56F /* SortNodeArray.swift in Sources */,
 				4A4140C22837F9400060D56F /* ReorderingListViewController.swift in Sources */,
 				4AE7D9472834249300D79E73 /* DiffableListViewController.swift in Sources */,

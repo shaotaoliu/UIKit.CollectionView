@@ -48,6 +48,8 @@ class ReorderingListViewController: UIViewController {
     private func setupDataSource() {
 
         let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, ReorderingItem> { cell, indexPath, item in
+            
+            // use the value cell:
             var config = UIListContentConfiguration.valueCell()
             config.text = item.emoji
             config.secondaryText = item.name

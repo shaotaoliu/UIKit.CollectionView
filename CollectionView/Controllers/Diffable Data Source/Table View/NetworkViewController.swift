@@ -20,6 +20,7 @@ class NetworkViewController: UIViewController {
     }
     
     private func configureDataSource()  {
+        
         dataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, itemIdentifier in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             var config = cell.defaultContentConfiguration()
